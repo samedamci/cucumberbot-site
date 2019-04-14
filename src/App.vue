@@ -1,29 +1,34 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+    <v-app dark>
+        <v-toolbar app>
+            <router-link to="/">
+                <v-toolbar-title class="headline text-uppercase">
+                    <span id="title" style="font-family: 'Dokdo', cursive">cucumber.bot</span>
+                </v-toolbar-title>
+            </router-link>
+            <v-spacer></v-spacer>
+            <router-link to="help">
+                <v-btn flat>Help</v-btn>
+            </router-link>
+            <router-link to="contact">
+                <v-btn flat>Contact</v-btn>
+            </router-link>
+        </v-toolbar>
+        <v-content>
+            <router-view></router-view>
+        </v-content>
+    </v-app>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Dokdo|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i');
+a {
+    color: white;
+    text-decoration: none;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+@media (max-width: 600px) {
+    #title {
+        font-size: 20px;
     }
-  }
 }
 </style>
+
