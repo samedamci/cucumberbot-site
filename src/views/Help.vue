@@ -11,6 +11,10 @@
             <v-btn-toggle>!help</v-btn-toggle>
             in message on your server.
         </v-card>
+        <br><p>What is the bot status?</p>
+        <a href="https://discordbots.org/bot/565794682836090880" >
+            <img src="https://discordbots.org/api/widget/status/565794682836090880.svg?noavatar=true" alt="Cucumber" />
+        </a>
     </v-container>    
 </template>
 <style lang="scss" scoped>
